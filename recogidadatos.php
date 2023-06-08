@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $mensaje = $_POST['descripcion'] ?? '';
 
-    // Validate and sanitize the data (implement appropriate validation rules)
 
     // Creamos un array para la variable $post_data
     $post_data = array(
