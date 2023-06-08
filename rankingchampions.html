@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Títulos de la Champions League</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+      width: auto;
+      height: 55px;
+    }
+
+    #milan {
+      width: 25px;
+      height: auto;
+    }
+
+    #juve {
+      width: 18px;
+      height: auto;
+    }
+
+    #borussia {
+      width: 33px;
+      height: auto;
+    }
+
+    #psv {
+      width: 38px;
+      height: auto;
+    }
+
+    #celtic {
+      width: 33px;
+      height: auto;
+    }
+
+    #aston {
+      width: 25px;
+      height: auto;
+    }
+
+    #hamburgo {
+      width: 33px;
+      height: auto;
+    }
+
+    #marsella {
+      width: 30px;
+      height: auto;
+    }
+
+    #steaua {
+      width: 35px;
+      height: auto;
+    }
+
+    #benfica {
+      width: 33px;
+      height: auto;
+    }
+
+    #nottingham {
+      width: 38px;
+      height: auto;
+    }
+
+    #chelsea {
+      width: 33px;
+      height: auto;
+    }
+
+    #inter {
+      width: 33px;
+      height: auto;
+    }
+
+    #united {
+      width: 33px;
+      height: auto;
+    }
+
+    #ajax {
+      width: 33px;
+      height: auto;
+    }
+
+    #barsa {
+      width: 33px;
+      height: auto;
+    }
+
+    #bayern {
+      width: 33px;
+      height: auto;
+    }
+
+    #madrid {
+      width: 27px;
+      height: auto;
+    }
+
+    #oporto {
+      width: 27px;
+      height: auto;
+    }
+
+    #liverpool {
+      width: 27px;
+      height: auto;
+    }
+
+    #estrella {
+      width: 33px;
+      height: auto;
+    }
+    @media (min-width: 949px) and (max-width: 1235px) {
+      td, th {
+        font-size: 9px;
+        font-weight: bold;
+ /* Disminuye el tamaño de fuente de las celdas */
+      }
+
+      #madrid {
+        width: 20px;
+      }
+
+      #oporto {
+        width: 20px;
+      }
+
+      #liverpool {
+        width: 20px;
+      }
+
+      #estrella {
+        width: 26px;
+      }
+
+      #bayern {
+        width: 26px;
+      }
+
+      #barsa {
+        width: 26px;
+      }
+
+      #united {
+        width: 26px;
+      }
+
+      #inter {
+        width: 26px;
+      }
+
+      #ajax {
+        width: 26px;
+      }
+
+      #chelsea {
+        width: 26px;
+      }
+
+      #benfica {
+        width: 26px;
+      }
+
+      #hamburgo {
+        width: 26px;
+      }
+
+      #celtic {
+        width: 26px;
+      }
+
+      #borussia {
+        width: 26px;
+      }
+
+      #nottingham {
+        width: 31px;
+      }
+
+      #marsella {
+        width: 23px;
+      }
+
+      #steaua {
+        width: 28px;
+      }
+
+      #psv {
+        width: 30px;
+      }
+
+      #milan {
+        width: 18px;
+      }
+
+      #aston {
+        width: 18px;
+      }
+
+      #juve {
+        width: 11px;
+      }
+
+    }
+
+    @media (min-width: 768px) and (max-width: 948px) {
+      td, th {
+        font-size: 6px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: auto;
+        height: 35px;
+      }
+
+      table {
+        width: 10%;
+      }
+
+      #madrid {
+        width: 14px;
+      }
+
+      #oporto {
+        width: 14px;
+      }
+
+      #liverpool {
+        width: 14px;
+      }
+
+      #estrella {
+        width: 20px;
+      }
+
+      #bayern {
+        width: 20px;
+      }
+
+      #barsa {
+        width: 20px;
+      }
+
+      #united {
+        width: 20px;
+      }
+
+      #inter {
+        width: 20px;
+      }
+
+      #ajax {
+        width: 20px;
+      }
+
+      #chelsea {
+        width: 20px;
+      }
+
+      #benfica {
+        width: 20px;
+      }
+
+      #hamburgo {
+        width: 20px;
+      }
+
+      #celtic {
+        width: 20px;
+      }
+
+      #borussia {
+        width: 20px;
+      }
+
+      #nottingham {
+        width: 25px;
+      }
+
+      #marsella {
+        width: 17px;
+      }
+
+      #steaua {
+        width: 22px;
+      }
+
+      #psv {
+        width: 24px;
+      }
+
+      #milan {
+        width: 12px;
+      }
+
+      #aston {
+        width: 12px;
+      }
+
+      #juve {
+        width: 6px;
+      }
+    
+      h2 {
+        font-size: 15px;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <h2>Títulos de Champions</h2>
+  <center><table>
+    <tr>
+      <th>ESCUDO</th>
+      <th>EQUIPO</th>
+      <th>TÍTULO</th>
+    </tr>
+    <tr>
+      <td><img src="http://localhost:2000/wp-content/uploads/2023/05/REALMADRID.png" alt="Real Madrid" id="madrid"></td>
+      <td>Real Madrid</td>
+      <td>14</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/ac-milan-logo.png" alt="AC Milan" id="milan"></td>
+        <td>AC Milan</td>
+        <td>7</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/LIVERPOOL.png" alt="LIVERPOOL" id="liverpool"></td>
+        <td>Liverpool</td>
+        <td>6</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/BAYERN-3.png" alt="BAYERN" id="bayern"></td>
+        <td>Bayern Münich</td>
+        <td>6</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/BARSA.png" alt="BARSA" id="barsa"></td>
+        <td>FC Barcelona</td>
+        <td>5</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/AJAX.png" alt="AJAX" id="ajax"></td>
+        <td>AJAX</td>
+        <td>4</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/UNITED.png" alt="UNITED" id="united"></td>
+        <td>Manchester United</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/INTER-2.png" alt="INTER" id="inter"></td>
+        <td>Inter Milan</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/CHELSEA.png" alt="CHELSEA" id="chelsea"></td>
+        <td>Chelsea</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/JUVE.png" alt="JUVENTUS" id="juve"></td>
+        <td>Juventus</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/OPORTO.png" alt="OPORTO" id="oporto"></td>
+        <td>Oporto</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/NOTTINGHAM.png" alt="NOTTINGHAM" id="nottingham"></td>
+        <td>Nottingham Forest</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/BENFICA.png" alt="BENFICA" id="benfica"></td>
+        <td>Benfica</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/STEAUA.png" alt="STEAUA" id="steaua"></td>
+        <td>Steaua Bucarest</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/CELTIC.png" alt="CELTIC" id="celtic"></td>
+        <td>Celtic Glasgow</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/ASTON.png" alt="ASTON" id="aston"></td>
+        <td>Aston Villa</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/PSV.png" alt="PSV" id="psv"></td>
+        <td>PSV Eindhoven</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/MARSELLA.png" alt="MARSELLA" id="marsella"></td>
+        <td>O. Marsella</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/HAMBURGO.png" alt="HAMBURGO" id="hamburgo"></td>
+        <td>Hamburgo SV</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/BORUSSIA-1.png" alt="BORUSSIA" id="borussia"></td>
+        <td>Borussia Dortmund</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><img src="http://localhost:2000/wp-content/uploads/2023/05/ESTRELLA.png" alt="ESTRELLA" id="estrella"></td>
+        <td>Estrella Roja</td>
+        <td>1</td>
+    </tr>
+  </table></center>
+</body>
+</html>

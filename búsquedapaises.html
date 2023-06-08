@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menús desplegables</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Ocultar todos los menús de equipos al cargar la página
+            $(".team-menu").hide();
+
+            // Mostrar u ocultar el menú de equipos según la selección del país
+            $(".country-select").change(function() {
+                var country = $(this).val();
+                $(".team-menu").hide();
+                if (country) {
+                    $("#team-selection").show();
+                    $("#team-" + country).show();
+                } else {
+                    $("#team-selection").hide();
+                }
+            });
+
+            // Redireccionar al enlace correspondiente cuando se envía el formulario
+            $("form").submit(function(event) {
+                var selectedCountry = $("#country").val();
+                var selectedTeam = $("#team-" + selectedCountry).val();
+                if (selectedTeam === "") {
+                    event.preventDefault(); // Cancelar el envío del formulario
+                    alert("Por favor, seleccione un equipo."); // Mostrar mensaje de error
+                } else {
+                    event.preventDefault(); // Cancelar el envío del formulario
+                    var searchParam = selectedTeam.toUpperCase();
+                    var url = "http://localhost:2000/?s=" + searchParam;
+
+                    // Realizar la redirección
+                    window.location.href = url;
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        h2 {
+            color: black;
+        }
+
+        input[type="submit"]:hover {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h2>Búsqueda por países</h2>
+
+    <form>
+        <label for="country">País:</label>
+        <select id="country" class="country-select">
+            <option value="">Seleccione un país</option>
+            <option value="espana">España</option>
+            <option value="inglaterra">Inglaterra</option>
+            <option value="alemania">Alemania</option>
+            <option value="italia">Italia</option>
+            <option value="francia">Francia</option>
+            <option value="portugal">Portugal</option>
+            <option value="holanda">Holanda</option>
+            <option value="escocia">Escocia</option>
+            <option value="rumania">Rumanía</option>
+            <option value="serbia">Serbia</option>
+        </select>
+        <br><br>
+        <div id="team-selection" style="display: none;">
+            <label for="team">Equipo:</label>
+            <select id="team" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="real madrid">Real Madrid</option>
+                <option value="barcelona">FC Barcelona</option>
+                <option value="atlético de madrid">Atlético de Madrid</option>
+            </select>
+
+            <select id="team-espana" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="real madrid">Real Madrid</option>
+                <option value="barcelona">FC Barcelona</option>
+                <option value="atlético de madrid">Atlético de Madrid</option>
+                <option value="valencia cf">Valencia CF</option>
+            </select>
+
+            <select id="team-alemania" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="bayern münich">Bayern Münich</option>
+                <option value="borussia dortmund">Borussia Dortmund</option>
+                <option value="hamburgo sv">Hamburgo SV</option>
+            </select>
+
+            <select id="team-inglaterra" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="manchester united">Manchester United</option>
+                <option value="liverpool">Liverpool FC</option>
+                <option value="chelsea">Chelsea</option>
+                <option value="arsenal">Arsenal</option>
+                <option value="manchester city">Manchester City</option>
+                <option value="nottingham forest">Nottingham Forest</option>
+                <option value="aston villa">Aston Villa</option>
+            </select>
+
+            <select id="team-italia" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="ac milan">AC Milan</option>
+                <option value="inter milan">Inter de Milan</option>
+                <option value="juventus">Juventus</option>
+            </select>
+
+            <select id="team-rumania" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="steaua">Steaua Bucarest</option>
+            </select>
+
+            <select id="team-francia" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="marsella">OM Marsella</option>
+                <option value="psg">PSG</option>
+            </select>
+
+            <select id="team-portugal" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="benfica">Benfica</option>
+                <option value="oporto">Oporto</option>
+            </select>
+
+            <select id="team-holanda" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="ajax">AJAX</option>
+                <option value="feyenoord">Feyenoord</option>
+            </select>
+
+            <select id="team-escocia" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="celtic">Celtic Glasgow</option>
+            </select>
+
+            <select id="team-serbia" class="team-menu">
+                <option value="">Seleccione un equipo</option>
+                <option value="estrella roja">Estrella Roja</option>
+            </select>
+        </div>
+        <br><br>
+        <input type="submit" value="Buscar">
+    </form>
+</body>
+</html>

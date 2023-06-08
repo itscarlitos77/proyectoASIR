@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galería de imágenes</title>
+  <style>
+    #gallery-container {
+      width: 1100px;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #current-image {
+      width: 750px;
+      height: 450px;
+      transition: opacity 0.5s ease;
+    }
+
+    h3 {
+      color: white;
+    }
+
+    #image-caption {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    #image-description {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: black;
+      background-color: white;
+      width: 750px;
+    }
+
+    #btn-left {
+      width: 60px;
+      height: auto;
+      rotate: -90deg;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    #btn-right {
+      width: 60px;
+      height: auto;
+      rotate: 90deg;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      margin-left: 30px;
+    }
+
+    @media screen and (min-width: 721px) {
+      #gallery-container {
+        width: 90%;
+        height: auto;
+      }
+      
+      #current-image {
+        width: 100%;
+        height: auto;
+      }
+      
+      #image-description {
+        width: 100%;
+      }
+
+      .botones {
+        width: 90%;
+      }
+      #btn-right {
+      float: right;
+      margin-right: 100px;
+      }
+      #btn-left {
+      float: left;
+      margin-left: 100px;
+      }
+    }
+
+    @media screen and (max-width: 721px) {
+      #gallery-container {
+        width: 90%;
+        height: auto;
+      }
+      
+      #current-image {
+        width: 100%;
+        height: auto;
+        touch-action: pan-y;
+      }
+      
+      #image-description {
+        width: 100%;
+      }
+
+      #botones {
+        display: none;
+      }
+    }    
+  </style>
+</head>
+<body>
+    <center><h3 style="color: rgb(193, 149, 255);">¡CONOCE LA HISTORIA DE LOS ESTADIOS MÍTICOS DE EUROPA!</h3></center>
+    <br>
+  <center>
+    <div id="image-caption">
+      <h3>SAN SIRO</h3>
+    </div>
+    <div id="botones">
+      <button id="btn-left">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/boton.png">
+      </button>
+      <button id="btn-right">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/boton.png">
+      </button>
+    </div>
+    <div id="gallery-container">
+      <img id="current-image" src="http://localhost:2000/wp-content/uploads/2023/05/SANSIRO.jpg" alt="Imagen de la galería">
+      <div id="image-description">
+        San Siro, el icónico estadio ubicado en Milán, ha sido testigo de innumerables noches mágicas en la UEFA Champions League. A lo largo de los años, este estadio ha acogido encuentros emocionantes y memorables que han dejado huella en la historia del fútbol europeo. Una de las noches más destacadas se remonta a la final de la UEFA Champions League en 1964, cuando el Inter de Milán se enfrentó al poderoso Real Madrid. En un enfrentamiento lleno de tensión y emoción, el Inter logró imponerse con un marcador de 3-1, llevándose así el título y consagrándose como campeón de Europa por primera vez en su historia. Fue un momento histórico para el club y para los aficionados presentes en San Siro, quienes celebraron con gran entusiasmo la victoria de su equipo. Otra noche inolvidable tuvo lugar en la final de la UEFA Champions League de 1965, cuando el Inter de Milán se enfrentó al SL Benfica. En un partido lleno de intensidad, ambos equipos lucharon por la gloria europea. A pesar de que el tiempo reglamentario y la prórroga terminaron sin goles, la tensión y la emoción estuvieron presentes durante todo el encuentro. Finalmente, el Inter se impuso en la tanda de penales, logrando así su segundo título consecutivo de la Champions League y dejando una huella imborrable en la historia del fútbol europeo. Estas noches de Champions vividas en San Siro son solo dos ejemplos de los muchos momentos memorables que ha presenciado este estadio a lo largo de los años. Desde remontadas épicas hasta goles de último minuto, San Siro ha sido testigo de la grandeza y la emoción del fútbol europeo en su máxima expresión. Los aficionados que han tenido la oportunidad de presenciar estos partidos en persona han sido testigos de momentos mágicos e inolvidables que quedarán grabados en sus recuerdos para siempre. San Siro se ha convertido en un símbolo del fútbol y en un lugar donde los sueños se hacen realidad. Así, a lo largo de su rica historia en la UEFA Champions League, San Siro ha albergado noches mágicas que han dejado una profunda impresión en el mundo del fútbol, haciendo de este estadio un lugar especial y legendario para los amantes del deporte rey.
+      </div>
+    </div>
+  </center>
+  <br><br>
+
+  <script>
+    var images = [
+      { src: 'http://localhost:2000/wp-content/uploads/2023/05/SANSIRO.jpg', title: 'SAN SIRO', description: 'San Siro, el icónico estadio ubicado en Milán, ha sido testigo de innumerables noches mágicas en la UEFA Champions League. A lo largo de los años, este estadio ha acogido encuentros emocionantes y memorables que han dejado huella en la historia del fútbol europeo. Una de las noches más destacadas se remonta a la final de la UEFA Champions League en 1964, cuando el Inter de Milán se enfrentó al poderoso Real Madrid. En un enfrentamiento lleno de tensión y emoción, el Inter logró imponerse con un marcador de 3-1, llevándose así el título y consagrándose como campeón de Europa por primera vez en su historia. Fue un momento histórico para el club y para los aficionados presentes en San Siro, quienes celebraron con gran entusiasmo la victoria de su equipo. Otra noche inolvidable tuvo lugar en la final de la UEFA Champions League de 1965, cuando el Inter de Milán se enfrentó al SL Benfica. En un partido lleno de intensidad, ambos equipos lucharon por la gloria europea. A pesar de que el tiempo reglamentario y la prórroga terminaron sin goles, la tensión y la emoción estuvieron presentes durante todo el encuentro. Finalmente, el Inter se impuso en la tanda de penales, logrando así su segundo título consecutivo de la Champions League y dejando una huella imborrable en la historia del fútbol europeo. Estas noches de Champions vividas en San Siro son solo dos ejemplos de los muchos momentos memorables que ha presenciado este estadio a lo largo de los años. Desde remontadas épicas hasta goles de último minuto, San Siro ha sido testigo de la grandeza y la emoción del fútbol europeo en su máxima expresión. Los aficionados que han tenido la oportunidad de presenciar estos partidos en persona han sido testigos de momentos mágicos e inolvidables que quedarán grabados en sus recuerdos para siempre. San Siro se ha convertido en un símbolo del fútbol y en un lugar donde los sueños se hacen realidad. Así, a lo largo de su rica historia en la UEFA Champions League, San Siro ha albergado noches mágicas que han dejado una profunda impresión en el mundo del fútbol, haciendo de este estadio un lugar especial y legendario para los amantes del deporte rey.' },
+      { src: 'http://localhost:2000/wp-content/uploads/2023/05/WEMBLEY.jpg', title: 'WEMBLEY', description: 'Wembley, el emblemático estadio ubicado en Londres, ha sido el escenario de innumerables noches mágicas en la UEFA Champions League. Desde su inauguración en 2007, este estadio ha acogido algunos de los partidos más épicos y memorables en la historia de la competición. Una de las noches más destacadas en Wembley tuvo lugar en la final de la UEFA Champions League de 2011, cuando el FC Barcelona se enfrentó al Manchester United. Fue un enfrentamiento entre dos gigantes del fútbol europeo, lleno de talento y emoción. El Barcelona, liderado por Lionel Messi, mostró un juego deslumbrante y se impuso con un contundente marcador de 3-1, asegurando así su cuarto título de la Champions League. Los aficionados presentes en Wembley fueron testigos de una exhibición de fútbol de alto nivel y celebraron con entusiasmo la victoria del equipo catalán. Otra noche inolvidable en Wembley fue la final de la UEFA Champions League de 2013, que enfrentó al Borussia Dortmund y al Bayern de Múnich. Fue un partido lleno de intensidad y emoción, con ambos equipos mostrando un fútbol ofensivo y dinámico. El Bayern de Múnich se proclamó campeón con un marcador de 2-1, en un emocionante encuentro que mantuvo a los espectadores al borde de sus asientos hasta el último minuto. Los aficionados presentes en Wembley fueron testigos de un espectáculo futbolístico inolvidable, donde la pasión y el talento se fusionaron en una noche mágica. Estas noches de Champions vividas en Wembley son solo dos ejemplos de los muchos momentos históricos que ha presenciado este estadio. Desde remontadas épicas hasta actuaciones individuales brillantes, Wembley ha sido testigo de la grandeza y la emoción del fútbol europeo en su máxima expresión. Los aficionados que han tenido la oportunidad de presenciar estos partidos en persona han sido testigos de momentos mágicos e inolvidables que quedarán grabados en su memoria para siempre. Wembley se ha convertido en un lugar icónico y reverenciado en el fútbol, donde los mejores equipos del continente han competido por el título más prestigioso a nivel de clubes. En resumen, a lo largo de su historia en la UEFA Champions League, Wembley ha sido el escenario de noches mágicas que han dejado una profunda impresión en el mundo del fútbol. Este estadio ha acogido encuentros llenos de emoción, talento y pasión, consolidándose como un lugar legendario para el deporte rey y brindando momentos inolvidables a los amantes del fútbol.' },
+      { src: 'http://localhost:2000/wp-content/uploads/2023/05/CAMPNOU2-scaled.jpeg', title: 'CAMP NOU', description: 'El Camp Nou, el estadio emblemático del FC Barcelona en Barcelona, España, ha sido testigo de innumerables noches mágicas en la UEFA Champions League. Con una capacidad de más de 99,000 espectadores, este estadio ha sido el escenario de momentos épicos y partidos legendarios a lo largo de la historia de la competición. Una de las noches más memorables en el Camp Nou ocurrió en la temporada 1998-1999, cuando el FC Barcelona se enfrentó al Bayern de Múnich en las semifinales de la Champions League. Después de perder el partido de ida por 1-0, el Barcelona necesitaba una remontada histórica. El partido de vuelta se convirtió en una exhibición de juego ofensivo por parte del Barcelona, liderado por su tridente de ataque compuesto por Rivaldo, Luis Enrique y Patrick Kluivert. El Barcelona logró una remontada épica y ganó el partido por 1-0, avanzando a la final de la Champions League en un emocionante desenlace. Los aficionados presentes en el Camp Nou fueron testigos de una noche mágica en la que su equipo superó todas las expectativas y logró una victoria inolvidable. Otra noche legendaria en el Camp Nou tuvo lugar en la temporada 2016-2017, durante los octavos de final de la Champions League, cuando el FC Barcelona se enfrentó al Paris Saint-Germain (PSG). Después de perder el partido de ida por 4-0, el Barcelona estaba prácticamente eliminado. Sin embargo, en el partido de vuelta, el equipo catalán logró una remontada histórica y ganó el partido por 6-1, avanzando a los cuartos de final de manera increíble. Fue una noche llena de emoción, tensión y momentos dramáticos que quedaron grabados en la memoria de los aficionados del Barcelona y del fútbol en general. El Camp Nou se convirtió en un escenario de magia y esperanza, mientras los jugadores del Barcelona desafiaban las probabilidades y lograban una remontada épica. Estas noches de Champions vividas en el Camp Nou son solo dos ejemplos de los muchos momentos históricos que ha presenciado este estadio. Desde actuaciones individuales brillantes hasta remontadas heroicas, el Camp Nou ha sido testigo de la grandeza y la emoción del fútbol europeo en su máxima expresión. Los aficionados que han tenido la oportunidad de presenciar estos partidos en el Camp Nou han sido testigos de momentos mágicos e inolvidables que han dejado una huella imborrable en la historia del fútbol. El estadio se ha convertido en un símbolo de la pasión y el talento futbolístico, donde los jugadores han desplegado su genialidad y los aficionados han celebrado victorias históricas. En resumen, el Camp Nou ha sido el escenario de noches mágicas en la UEFA Champions League, donde el fútbol ha trascendido los límites y ha regalado momentos inolvidables. Este estadio ha sido testigo de la grandeza del FC Barcelona y ha dejado una marca indeleble en la historia del fútbol europeo.'},    
+      { src: 'http://localhost:2000/wp-content/uploads/2023/05/CALDERON2-scaled.jpeg', title:  'VICENTE CALDERÓN', description: 'El Estadio Vicente Calderón, que fue el hogar del Atlético de Madrid hasta la temporada 2016-2017, ha sido testigo de muchas noches mágicas y legendarias en la Liga de Campeones de la UEFA. El estadio, situado a orillas del río Manzanares en Madrid, se convirtió en el escenario de grandes batallas futbolísticas y momentos inolvidables para los aficionados del Atlético y los equipos visitantes. Una de las noches más mágicas en el Vicente Calderón en la Champions League ocurrió el 9 de abril de 2014. El Atlético de Madrid se enfrentó al Barcelona en los cuartos de final de la competición. En el partido de ida, el Atlético logró un empate 1-1 en el Camp Nou. En el partido de vuelta en el Vicente Calderón, el ambiente estaba cargado de emoción y expectativa. El Atlético se adelantó temprano con un gol de Koke, y después de un partido intenso, Arda Turan selló la victoria por 1-0 para el equipo local. Esa victoria significó la eliminación del Barcelona y la clasificación del Atlético a las semifinales de la Champions League. Otra noche inolvidable tuvo lugar el 30 de abril de 2014. En la semifinal de vuelta contra el Chelsea, el Atlético necesitaba un empate para avanzar a la final. Después de un primer tiempo sin goles, el Chelsea se puso en ventaja con un gol de Fernando Torres, exjugador del Atlético. Sin embargo, el equipo no se rindió y, en los minutos finales del partido, Adrián López anotó el gol del empate para el Atlético. Esa noche, el Vicente Calderón vibró de emoción y alegría cuando el Atlético logró el empate necesario para avanzar a la final de la Champions League.  El ambiente nocturno europeo en el Vicente Calderón fue incomparable, y el aura electrizante del estadio se podía sentir fácilmente tan pronto como uno ponía un pie en el terreno. Los cánticos previos al partido resonaban por toda la ciudad, algo nunca antes visto en ningún otro lugar de Europa. Las celebraciones posteriores al partido en el campo entre los jugadores y sus aficionados solían durar varias horas.'},
+    ];
+    var currentIndex = 0;
+    var currentImage = document.getElementById('current-image');
+    var imageCaption = document.getElementById('image-caption');
+    var imageDescription = document.getElementById('image-description');
+    var btnLeft = document.getElementById('btn-left');
+    var btnRight = document.getElementById('btn-right');
+    var touchstartX = 0;
+    var touchendX = 0;
+
+    btnLeft.addEventListener('click', function() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage();
+    });
+
+    btnRight.addEventListener('click', function() {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage();
+    });
+
+    currentImage.addEventListener('touchstart', function(event) {
+      touchstartX = event.touches[0].clientX;
+    });
+
+    currentImage.addEventListener('touchend', function(event) {
+      touchendX = event.changedTouches[0].clientX;
+      handleGesture();
+    });
+
+    function handleGesture() {
+      if (touchendX < touchstartX) {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+      }
+
+      if (touchendX > touchstartX) {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+      }
+    }
+
+    function updateImage() {
+      currentImage.style.opacity = 0;
+      setTimeout(function() {
+        currentImage.src = images[currentIndex].src;
+        imageCaption.innerHTML = '<h3>' + images[currentIndex].title + '</h3>';
+        imageDescription.textContent = images[currentIndex].description;
+        currentImage.style.opacity = 1;
+      }, 500); // 500 milliseconds for the transition
+    }
+  </script>
+</body>
+</html>
+
+

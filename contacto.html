@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        #div1 {
+            background-color: lightgray;
+        }
+
+        b {
+            color: black;
+        }
+
+        table {
+            background-color: lightgray;
+        }
+
+        td {
+            width: 900px;
+            border-collapse: collapse;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        /* Estilos para pantallas de móviles */
+        @media screen and (max-width: 660px) {
+            input[type="text"],
+            textarea {
+                width: 90% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>  
+            <td>
+                <h2 style="margin-left: 20px;">Formulario de contacto</h2>
+            </td>
+            <td>
+                <img src="http://localhost:2000/wp-content/uploads/2023/05/cropped-ICONOFINAL.png" id="logo" style="height: 80px; width: auto; float:right; margin-right: 20px;">
+            </td>
+        </tr>
+    </table>
+    <div id="div1">
+        <br><br>
+        <h4>Le rogamos que nos proporcione información de contacto válida, para poder ponernos en contacto con usted lo antes posible</h4>
+        <br>
+        <center>
+            <form action="http://localhost:2000/?page_id=362" method="post">
+                <b>Asunto: </b>
+                <input type="text" name="asunto" placeholder="Especifica un asunto" minlength="3" size="15" style="width:400px; height:30px;" required>
+                <br><br>
+                <b>Nombre:</b>
+                <input type="text" name="nombre" placeholder="Introduzca su nombre" minlength="3" size="15" style="width:400px; height:30px;" required>
+                <br><br>
+                <b>E-mail:  </b>
+                <input type="text" name="email" placeholder="Introduzca su email" style="width:400px; height:30px;" required>
+                <br><br>
+                <b>Cuéntanos:</b>
+                <br>
+                <textarea name="descripcion" style="width:900px; height:200px;" required></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </center>
+        <br>
+    </div>
+<br>
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  
+	h3, h4 {
+      color: rgb(193, 149, 255);
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      background-color: black;
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    select {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(183, 106, 255);
+      font-weight: bold;
+      color: black;
+      font-size: 14px;
+      width: 200px;
+      transition: background-color 0.3s;
+    }
+
+    select option {
+      background-color: #fff;
+      color: #333;
+    }
+
+  table {
+      border-collapse: collapse;
+    }
+
+    li {
+      font-weight: bold;
+    }
+
+    td {
+      position: relative;
+      padding: 10px;
+      width: 700px;
+      height: 300px;
+      text-align: center;
+    }
+/* ESTILO DE LOS ESCUDOS ----------------------------------------------------------------------------*/
+
+    td img {
+    width: 200px;
+    height: auto;
+    transition: opacity 0.5s;
+    }
+    
+    #liverpool {
+		width: 170px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+	#realmadrid {
+		width: 170px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+	#acmilan {
+	  width: auto;
+      height: 225px;
+      transition: opacity 0.5s;
+	}
+
+	#juve {
+		width: auto;
+		height: 230px;
+		transition: opacity 0.5s;
+	}
+
+	#atleti {
+		width: 175px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+  #sevilla {
+		width: 175px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+  #arsenal {
+		width: 175px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+  #oporto {
+		width: 175px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+  #tottenham {
+		width: 215px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+  #roma {
+		width: 170px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+  #villarreal {
+		width: 170px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+  #atalanta {
+		width: 140px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+  #rbleipzig {
+		width: 300px;
+		height: auto;
+		transition: opacity 0.5s;
+	}
+
+/*-----------------------------------------------------------------------------*/
+
+    td:hover img {
+      opacity: 0.7;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.5s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    td:hover .overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .tabla {
+      overflow-x: auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .movil {
+      display: none;
+    }
+
+    @media (max-width: 890px) {
+
+      .buscar {
+        display: none;
+      }
+
+      .tabla {
+        width: 100%;
+      }
+      .tabla table {
+        display: block;
+      }
+
+      .tabla td {
+        display: block;
+        width: 350px;
+        height: 270px;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .movil {
+        display: block;
+    }
+
+      .pc {
+      display: none;
+    }
+    }
+  </style>
+</head>
+<body>
+<br>
+  <h3 class="pc">PASA EL CURSOR POR LOS ESCUDOS DE LOS EQUIPOS PARA VER DATOS SOBRE ELLOS</h3>
+  <h4 class="movil"> O TOCA ENCIMA DEL ESCUDO PARA ELLO</h4>
+  <br>
+  <!-- Agrega un botón de filtrado -->
+  <center><div class="buscar">
+    <label for="pais">SELECCIONA UN PAÍS: </label>
+    <select id="pais">
+      <option value="todos">TODOS LOS EQUIPOS</option>
+      <option value="españa">ESPAÑA</option>
+      <option value="inglaterra">INGLATERRA</option>
+      <option value="alemania">ALEMANIA</option>
+      <option value="italia">ITALIA</option>
+      <option value="francia">FRANCIA</option>
+      <option value="portugal">PORTUGAL</option>
+      <option value="holanda">PAISES BAJOS</option>
+    </select>
+  </div></center>
+<br>
+  <div class="tabla">
+    <table>
+      <tr>
+        <td data-pais="españa">
+          <img src="http://localhost:2000/wp-content/uploads/2023/05/REALMADRID.png" alt="Real Madrid" id="realmadrid">
+          <div class="overlay">
+            <b>REAL MADRID</b>
+            <ul>
+              <li>Máximo ganador de la competición: 14 veces</li>
+              <li>Único equipo en lograr el tricampeonato bajo denominación de UEFA Champions League: 2016-2018</li>
+              <li>Tienen al máximo goleador histórico de la competición: Cristiano Ronaldo con 140 goles</li>
+            </ul>
+          </div>
+        </td>
+        
+        <td data-pais="italia">
+          <img src="http://localhost:2000/wp-content/uploads/2023/05/ac-milan-logo.png" alt="AC Milan" id="acmilan">
+          <div class="overlay">
+        <b>AC Milan</b>
+        <ul>
+          <li>Han ganado 7 Champions, teniendo 4 subcampeonatos</li>
+          <li>Ha contado con iconos del fútbol como Paolo Maldini, Franco Baresi, van Basten, Gullit, Shevchenko</li>
+          <li>Establecieron entre 1991 y 1993 un record de imbatibilidad de 58 partidos</li>
+        </ul> 
+      </div>
+        </td>
+
+        <td data-pais="inglaterra">
+          <img src="http://localhost:2000/wp-content/uploads/2023/05/LIVERPOOL.png" alt="Liverpool FC" id="liverpool">
+          <div class="overlay">
+        <b>LIVERPOOL FC</b>
+        <ul>
+          <li>Ganador en 6 ocasiones de la competición</li>
+          <li>Protagonizó una de las mejores remontadas de la competición: Final de Estambul 2005, remontando un 3-0 al AC Milan</li>
+          <li>Anfield es un fortín, donde la tasa de victorias visitantes es muy baja</li>
+        </ul>
+      </div>
+        </td>
+     </tr>
+     
+     <tr>
+      <td data-pais="alemania">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/BAYERN-3.png" alt="Bayern" id="bayern">
+        <div class="overlay">
+        <b>BAYERN MÜNICH</b>
+        <ul>
+          <li>Ganador de la competición en 6 ocasiones</li>
+          <li>De los equipos más goleadores de la competición. Recientemente, destaca el 8-2 al FC Barcelona</li>
+          <li>En la 2012/23, lograron el triplete, consiguiendo Champions, DFB Pokal y Bundesliga</li>
+        </ul>
+        </div>	
+      </td>
+      
+      <td data-pais="españa">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/BARSA.png" alt="FC Barcelona" id="barsa">
+        <div class="overlay">
+          <b>FC BARCELONA</b>
+          <ul>
+           <li>Ganador de la competición en 5 ocasiones</li>
+           <li>Ha contado en sus filas con el segundo máximo goleador de la historia de la competición: Leo Messi con 129 goles</li>
+           <li>Lograron el mítico sextete de títulos en 2009, ganando todos los títulos posibles. Fue el primer club en conseguirlo</li>
+          </ul>
+        </div>	
+      </td>
+
+      <td data-pais="inglaterra">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/CHELSEA.png" alt="Chelsea FC" id="chelsea">
+			  <div class="overlay">
+			    <b>CHELSEA FC</b>
+			    <ul>
+          <li>Ganador de la competición en 2 ocasiones</li>
+          <li>Jugadores como Drogba, Lampard, Fernando Torres o Petr Čech han militado en la era dorada del club</li>
+          <li>En la 2012/23, establecieron un record de 16 goles en la fase de grupos, promediando casi 3 goles por partido</li>
+          </ul>
+        </div>	
+		  </td>
+		</tr>
+
+    <tr>
+      <td data-pais="italia">
+			  <img src="http://localhost:2000/wp-content/uploads/2023/05/JUVE.png" alt="Juventus" id="juve">
+			  <div class="overlay">
+				<b>JUVENTUS</b>
+				<ul>
+				  <li>Ganador de la competición en 2 ocasiones</li>
+				  <li>La Juventus es apodada La Dama de Hierro en referencia a su historia y su fortaleza en la competición</li>
+				  <li>En la temporada 1995-1996, la Juventus tuvo una racha espesctacular, invicta hasta la final, donde cayeron ante el AJAX</li>
+				</ul>
+			  </div>	
+			</td>
+
+      <td data-pais="españa">
+				<img src="http://localhost:2000/wp-content/uploads/2023/05/ATLETI.png" alt="Atlético de Madrid" id="atleti">
+				<div class="overlay">
+				  <b>ATLÉTICO DE MADRID</b>
+				  <ul>
+					<li>Subcampeón en 3 ocasiones</li>
+					<li>Tiene el récord del equipo con menos goles concedidos en una edición, recibiendo 6 goles en 13 partidos</li>
+					<li>Debido a la sanción del estadio, la final que disputó en 1974, se jugó sin público</li>
+				  </ul>
+				</div>	
+			  </td>
+
+        <td data-pais="alemania">
+          <img src="http://localhost:2000/wp-content/uploads/2023/05/BORUSSIA-1.png" alt="Borussia Dortmund" id="bvb">
+          <div class="overlay">
+            <b>BORUSSIA DORTMUND</b>
+            <ul>
+            <li>Campeón en 1997</li>
+            <li>Récord de equipo más joven en ganar la competición, con promedio de 24 años</li>
+            <li>Primer jugador en anotar 4 goles en semifinales: Robert Lewandowski logró un histórico póker ante el Real Madrid</li>
+            </ul>
+          </div>	
+          </td>
+    </tr>
+
+    <tr>
+      <td data-pais="inglaterra">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/CITY.png" alt="Manchester City" id="city">
+        <div class="overlay">
+        <b>MANCHESTER CITY</b>
+        <ul>
+          <li>Subcampeón en 1 ocasión</li>
+          <li>Tuvieron que esperar hasta la temporada 2011-2012 para hacer su debut en la UEFA Champions League</li>
+          <li>En la temporada 2019-2020, el Manchester City estableció un nuevo récord al anotar la mayor cantidad de goles en una sola edición: 32 goles en 10 partidos</li>
+          </ul>
+       </div>	
+      </td>
+
+      <td data-pais="italia">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/INTERNUEVO.png" alt="Inter Milan" id="inter">
+        <div class="overlay">
+          <b>INTER MILAN</b>
+          <ul>
+          <li>Campeón en 3 ocasiones</li>
+          <li>Antes de su triunfo en la Champions League en 2010, el Inter de Milán había pasado más de 45 años sin ganar el trofeo</li>
+          <li>Lograron un hito histórico en la temporada 2009-2010 al ganar la Serie A italiana, la Copa Italia y la Champions </li>
+          </ul>
+        </div>	
+        </td>
+        
+        <td data-pais="holanda">
+          <img src="http://localhost:2000/wp-content/uploads/2023/05/AJAX.png" alt="AJAX" id="ajax">
+          <div class="overlay">
+            <b>AJAX</b>
+            <ul>
+            <li>Campeón en 4 ocasiones</li>
+            <li>En la temporada 1971/72 ganaron la Copa de Europa, la Eredivisie y la Copa de los Países Bajos. Fue el primer club en lograr este triplete histórico.</li>
+            <li>Sjaak Swart, un legendario jugador del Ajax, anotó el primer gol en la historia de la Liga de Campeones en 1955.</li>
+            </ul>
+          </div>	
+          </td>
+    </tr>
+
+    <tr>
+      <td data-pais="inglaterra">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/UNITED.png" alt="Manchester United" id="united">
+        <div class="overlay">
+          <b>MANCHESTER UNITED</b>
+          <ul>
+          <li>Campeón en 3 ocasiones</li>
+          <li>En la temporada 1998-1999, lograron el 'Treble' compuesto por la Premier League, la FA Cup y la Champions</li>
+          <li>El primer campeón inglés: En la temporada 1967-1968 ganaron al Benfica 4-1, con goles de Best y Charlton</li>
+          </ul>
+        </div>	
+        </td>
+
+        <td data-pais="francia">
+          <img src="http://localhost:2000/wp-content/uploads/2023/05/PSG2.png" alt="PSG" id="psg">
+          <div class="overlay">
+            <b>PSG</b>
+            <ul>
+            <li>Subcampeón en 1 ocasión</li>
+            <li>En la temporada 2019-2020, el PSG estableció un récord al convertirse en el primer equipo en marcar 25 goles en la fase de grupos</li>
+            <li>Récord del gol más rápido de la historia de la Champions en ronda eliminatoria: Kylian Mbappé anotó a los 31 segundos de partido</li>
+            </ul>
+          </div>	
+          </td>
+
+          <td data-pais="españa">
+						<img src="http://localhost:2000/wp-content/uploads/2023/05/SEVILLA.png" alt="Sevilla" id="sevilla">
+						<div class="overlay">
+						  <b>SEVILLA FC</b>
+						  <ul>
+							<li>Rey de la Europa League: 6 títulos</li>
+							<li>Mayor cantidad de empates en una fase de grupos: 6 empates en 6 partidos de la fase de grupos</li>
+							<li>Récord del gol más rápido de la historia de la Champions: Jesús Navas anotó a los 13 segundos de partido</li>
+						  </ul>
+						</div>	
+					  </td>
+    </tr>
+
+    <tr>
+      <td data-pais="italia">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/NAPOLI.png" alt="NÁPOLES" id="napoles">
+        <div class="overlay">
+          <b>NÁPOLES</b>
+          <ul>
+          <li>Ganador de la Europa League en la temporada 1988/89</li>
+          <li>Bajo el liderazgo de Maradona llegaron a la final de la Copa de Europa (ahora Champions League), pero perdieron ante el AC Milan</li>
+          <li>A pesar de ser uno de los clubes más emblemáticos de Italia, el Nápoles hizo su debut en la Champions League en la temporada 2011-2012. Antes de eso, solo había participado en la antigua Copa de Europa en tres ocasiones.</li>
+          </ul>
+        </div>	
+        </td>
+
+        <td data-pais="inglaterra">
+          <img src="http://localhost:2000/wp-content/uploads/2023/05/ARSENAL.png" alt="ARSENAL" id="arsenal">
+          <div class="overlay">
+            <b>ARSENAL</b>
+            <ul>
+            <li>En la temporada 2005-2006, el Arsenal hizo historia al llegar a la final de la Champions League sin perder ningún partido. Aunque cayeron en la final, se convirtieron en el primer equipo inglés en lograrlo</li>
+            <li>Aunque el Arsenal es un club histórico, no hizo su debut en la fase de grupos de la Champions League hasta la temporada 1998-1999</li>
+            <li>Thierry Henry es el máximo goleador en la historia del Arsenal en la Champions League, con 42 goles en 114 apariciones</li>
+            </ul>
+          </div>	
+          </td>
+
+          <td data-pais="portugal">
+            <img src="http://localhost:2000/wp-content/uploads/2023/05/OPORTO.png" alt="OPORTO" id="oporto">
+            <div class="overlay">
+              <b>OPORTO</b>
+              <ul>
+              <li>Ganador hasta en 2 ocasiones de la competición</li>
+              <li>El "Triple Corona" en 2003-2004, bajo la dirección del entrenador José Mourinho. Ganaron no solo la Primeira Liga, sino también la Taça de Portugal y la Champions</li>
+              <li>Derlei anotó el gol más rápido en una final de la competición hasta el momento, marcando a los 3 minutos y 27 segundos</li>
+              </ul>
+            </div>	
+            </td>
+    </tr>
+    
+    <tr>
+      <td data-pais="italia">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/ROMA.png" alt="AS ROMA" id="roma">
+        <div class="overlay">
+          <b>AS ROMA</b>
+          <ul>
+          <li>Alcanzó su única final en la temporada 1984/85, pero perdió contra el Liverpool en penaltis</li>
+          <li>Francesco Totti metió el gol más rápido de la historia del club en la competición: 36 segundos tardó en hacerlo</li>
+          <li>La racha invicta en casa: Entre 2002 y 2008, la AS Roma mantuvo una racha invicta de 26 partidos consecutivos en casa en la Champions League. Esta serie comenzó el 3 de diciembre de 2002 y finalizó el 12 de marzo de 2008.</li>
+          </ul>
+        </div>	
+        </td>
+
+        <td data-pais="inglaterra">
+          <img src="http://localhost:2000/wp-content/uploads/2023/05/TOTTENHAM-2.png" alt="TOTTENHAM" id="tottenham">
+          <div class="overlay">
+            <b>TOTTENHAM</b>
+            <ul>
+            <li>Ganador de la Europa League en 2 ocasiones</li>
+            <li>Su última participación antes de la temporada 2010-2011 fue en la Copa de Europa de 1961-1962, donde llegaron a las semifinales.</li>
+            <li>El primer subcampeonato en 1961: En la Copa de Europa de 1960-1961, el Tottenham llegó a la final y se enfrentó al Benfica, donde perdió por 2-1</li>
+            </ul>
+          </div>	
+          </td>
+
+          <td data-pais="portugal">
+            <img src="http://localhost:2000/wp-content/uploads/2023/05/BENFICA.png" alt="BENFICA" id="benfica">
+            <div class="overlay">
+              <b>BENFICA</b>
+              <ul>
+              <li>Ganador de la competición hasta en 2 ocasiones</li>
+              <li>Eusébio, máximo goleador del Benfica: anotó 47 goles en la Copa de Europa</li>
+              <li>El récord de mayor goleada en la competición: En la temporada 1965-1966, el Benfica estableció un récord al lograr la mayor victoria en la historia de la Copa de Europa hasta ese momento. Derrotaron al Stade Dudelange de Luxemburgo por 8-0 en un partido de la fase de grupos.</li>
+              </ul>
+            </div>	
+            </td>
+    </tr>
+
+    <tr>
+      <td data-pais="españa">
+        <img src="http://localhost:2000/wp-content/uploads/2023/05/VILLARREAL.png" alt="VILLARREAL" id="villarreal">
+        <div class="overlay">
+          <b>VILLARREAL</b>
+          <ul>
+          <li>Ganador de la Europa League en 1 ocasión (2021)</li>
+          <li>La primera participación del Villarreal en la Champions League fue en la 2005-2006. Lograron llegar a las semifinales, donde fueron eliminados por el Arsenal.</li>
+          <li>El récord de victorias consecutivas: En la temporada 2020-2021, el Villarreal estableció un nuevo récord al ganar todos los seis partidos de la fase de grupos de la Champions League.</li>
+          </ul>
+        </div>	
+        </td>
+
+        <td data-pais="italia">
+          <img src="http://localhost:2000/wp-content/uploads/2023/05/ATALANTA.png" alt="ATALANTA" id="atalanta">
+          <div class="overlay">
+            <b>ATALANTA</b>
+            <ul>
+            <li>Debut tardío: A pesar de ser uno de los equipos más destacados en la Serie A italiana en los últimos años, el Atalanta hizo su debut en la UEFA Champions League en la temporada 2019-2020.</li>
+            <li>Estadio neutral: Su campo no cumple la normativa de la UEFA. Han jugado sus partidos de local en el Estadio Gewiss, ubicado en Bérgamo, Italia.</li>
+            <li>Récord de goles en una sola edición: En la temporada 2019-2020, anotaron 28 goles, nuevo récord para un equipo italiano en una sola edición del torneo.</li>
+            </ul>
+          </div>	
+          </td>
+
+          <td data-pais="alemania">
+            <img src="http://localhost:2000/wp-content/uploads/2023/05/RBLEIPZIG.png" alt="RB LEIPZIG" id="rbleipzig">
+            <div class="overlay">
+              <b>RB LEIZIG</b>
+              <ul>
+              <li>El RB Leipzig es un club relativamente joven. Fue fundado en 2009, y en la temporada 2016-2017, el equipo se clasificó por primera vez para la UEFA Champions League,</li>
+              <li>Primer año espectacular: Alcanzaron las semifinales en la temporada 2019/20, la de su debut</li>
+              <li>Enfoque en la juventud: El RB Leipzig es conocido por el desarrollo de jugadores jóvenes y talentosos: Dayot Upamecano, Timo Werner o Christopher Nkunku son algunos ejemplos</li>
+              </ul>
+            </div>	
+            </td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <script>
+    // Obtener el elemento select y los elementos de los equipos
+    const select = document.getElementById("pais");
+    const equipos = document.querySelectorAll("td[data-pais]");
+
+    // Agregar un evento de cambio al select
+    select.addEventListener("change", function() {
+      const paisSeleccionado = select.value; // Obtener el valor seleccionado
+
+      // Iterar sobre los equipos y mostrar/ocultar según el país seleccionado
+      equipos.forEach(function(equipo) {
+        const paisEquipo = equipo.getAttribute("data-pais");
+        if (paisSeleccionado === "todos" || paisSeleccionado === paisEquipo) {
+          equipo.classList.remove("hidden"); // Mostrar equipo
+        } else {
+          equipo.classList.add("hidden"); // Ocultar equipo
+        }
+      });
+    });
+  </script>
+</body>
+</html>
