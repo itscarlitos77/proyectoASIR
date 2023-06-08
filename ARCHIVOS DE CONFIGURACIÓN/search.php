@@ -1,4 +1,5 @@
 <?php
+// Grupo Carlos, Luis e Isaac
 /**
  * The template for displaying Search Results pages.
  *
