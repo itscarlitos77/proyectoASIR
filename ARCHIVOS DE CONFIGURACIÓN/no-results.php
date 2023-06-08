@@ -1,4 +1,5 @@
 <?php
+// Grupo Carlos, Luis e Isaac
 /**
  * The template part for displaying a message that posts cannot be found.
  *
